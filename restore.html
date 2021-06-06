@@ -1,0 +1,156 @@
+<html>
+    <title></title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        table,tr,td,th{
+            padding: 5px;
+        }
+        table{
+            border-spacing: 15px;
+        }
+        #clock{
+            float:right;
+            margin-right:2.25%;
+            margin-top: 18px;
+            font-weight:bold;
+            font-size:28px;
+            color: white;
+        }
+        #date {
+            float:left;
+            margin-left:1.25%;
+            font-weight:bold;
+            margin-top: 18px;
+            font-size:28px;
+            color: white;
+        }
+        .button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            }
+            .button1 {
+            background-color: #003263;
+            border-radius: 8px;
+            }
+            .button1:hover {
+                box-shadow: 0 5px 50px 0 white;
+                border-radius: 8px;
+                background-color: #007bff;
+                color: White;
+                }
+
+            .hue {
+                color:yellow;
+                padding:10px;
+                border-radius:10px;
+                animation:hue 5s linear infinite;
+                -webkit-animation: hue 5s linear infinite;
+                box-shadow: 0px 0px 50px yellow;
+                color:white;
+                background:rgba(255,255,0,0.4);
+                    }
+            .hue:hover{
+                color:yellow;
+                background:transparent;
+                    }
+       @keyframes hue{
+       0%{
+       filter:hue-rotate(0deg);
+       -webkit-filter:hue-rotate(0deg);
+       }
+       10%{
+       box-shadow: 0px 1px 50px yellow;
+       }
+       20%{
+       box-shadow: 1px 1px 50px yellow;
+       }
+       30%{
+       box-shadow: 1px 0px 50px yellow;
+       }
+       40%{
+        box-shadow: 1px -1px 50px yellow;
+       }
+       50%{
+       box-shadow: 0px -1px 50px yellow;
+       }
+       60%{
+       box-shadow: -1px -1px 50px yellow;
+       }
+       70%{
+       box-shadow: -1px 0px 50px yellow;
+       }
+       80%{
+       box-shadow: -1px 1px 50px yellow;
+       }
+       90%{
+       box-shadow: 0px 1px 50px yellow;
+       }
+       100%{
+       filter:hue-rotate(360deg);
+       -webkit-filter:hue-rotate(360deg);
+       }
+       }        
+    </style>
+    <script>
+        function showdate() {
+            dt = new Date();
+            Hour= dt.getHours();
+            Minute= dt.getMinutes();
+            Day=dt.getDate();
+            Month=dt.getMonth()+1;
+            Year=dt.getFullYear();
+            if (Minute < 10) { Minutvare = "0" + Minute; };
+            if (Hour < 10) { Hour = "0" + Hour; };
+            document.getElementById("date").innerHTML = (Day+"/"+Month+"/"+Year);
+            document.getElementById("clock").innerHTML = (Hour+":"+Minute);
+        }
+        setInterval(showdate,0);
+    </script>
+    <body bgcolor="black">
+        <table style="width: 95%;">
+            <tr>
+                <td>
+                    <span id="date">29/5/2021</span>
+                </td>
+                <td>
+                    <div class="font" align="center"><h1> <font style="color: white;"><a href="H:\ayush\JAil\PS4_HOME.html" style="color: white;">SHIV ELECTRONIC</a></font></h1></div>
+                </td>
+                <td>
+                    <span id="clock">19:13</span>
+                </td>
+            </tr>
+        </table>
+        <br><br><br><br>
+        <center>
+            <div class="box" style="width:500px;height:100px;border:1px solid #000;">
+                <table>
+                    <tr>
+                        <td colspan="2"> <font style="color: white;"><h1>User Guide Host</h1></font> </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><button class="button button1">7.55</button></td>
+                        <td><button class="button button1">7.55A</button></td>
+                    </tr>
+                </table>
+            </div>
+        </center>
+        <br><br><br><br><br><br><br><br><br><br>
+        <br>
+        <center>
+            <div class="box" style="width:500px;height:100px;border:1px solid #000; color: white;">
+                <h3>Designed, Ported and Compiled by : </h3> 
+                    <span class="hue">Shiv Electronic's</span>            
+            </div>
+        </center>
+    </body>
+</html>
